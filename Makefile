@@ -2,7 +2,7 @@
 dc_build:
 	docker-compose -f ./docker/docker-compose.yml build
 
-dc_down:
+dc_stop:
 	docker-compose -f ./docker/docker-compose.yml stop
 
 dc_down:
