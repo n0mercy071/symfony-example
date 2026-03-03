@@ -6,6 +6,9 @@
 - [x] Create Symfony Application
 
 ## Step 2
-### Debugging
 - [x] Install xdebug
 - [x] Configure Xdebug with PhpStorm
+
+## Step 3
+- [x] Install PHPUnit
+- [x] Integrate PHPUnit with a PhpStorm project
