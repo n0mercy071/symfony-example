@@ -12,3 +12,7 @@
 ## Step 3
 - [x] Install PHPUnit
 - [x] Integrate PHPUnit with a PhpStorm project
+
+## Step 4
+- [x] Onion Architecture
+- [x] Monolith First
