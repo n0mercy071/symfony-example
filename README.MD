@@ -16,3 +16,11 @@
 ## Step 4
 - [x] Onion Architecture
 - [x] Monolith First
+
+## Step 5
+- [x] Installing Doctrine
+- [x] Configuring the Database
+- [x] Mapping
+- [x] Migrations
+- [x] Repository
+- [x] Database Testing
