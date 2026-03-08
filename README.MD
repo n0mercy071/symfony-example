@@ -24,3 +24,4 @@
 - [x] Migrations
 - [x] Repository
 - [x] Database Testing
+- [x] Fixtures
