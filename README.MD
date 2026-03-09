@@ -25,3 +25,7 @@
 - [x] Repository
 - [x] Database Testing
 - [x] Fixtures
+
+## Step 6
+- [x] CQRS pattern
+- [x] Symfony Messenger

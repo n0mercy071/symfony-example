@@ -29,4 +29,11 @@ class UserRepository extends ServiceEntityRepository implements UserRepositoryIn
         $res = $this->find($ulid);
         return $res instanceof User ? $res : null;
     }
+
+    public function findByEmail(string $email): ?User
+    {
+        $user = $this->findOneBy(['email' => $email]);
+
+        return $user instanceof User ? $user : null;
+    }
 }
