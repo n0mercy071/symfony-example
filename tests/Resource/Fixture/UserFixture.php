@@ -1,4 +1,5 @@
 <?php
+declare(strict_types=1);
 
 namespace App\Tests\Resource\Fixture;
 
@@ -13,11 +14,15 @@ class UserFixture extends Fixture
 
     public const string REFERENCE_NAME = 'user';
 
+    public function __construct(private readonly UserFactory $userFactory)
+    {
+    }
+
     public function load(ObjectManager $manager): void
     {
         $email = self::getFaker()->email();
         $password = self::getFaker()->password();
-        $user = new UserFactory()->create($email, $password);
+        $user = $this->userFactory->create($email, $password);
 
         $manager->persist($user);
         $manager->flush();

@@ -1,4 +1,5 @@
 <?php
+declare(strict_types=1);
 
 namespace App\Tests\Resource\Fixture;
 
@@ -10,9 +11,13 @@ class AdminFixture extends Fixture
 {
     public const string REFERENCE_NAME = 'admin_user';
 
+    public function __construct(private readonly UserFactory $userFactory)
+    {
+    }
+
     public function load(ObjectManager $manager): void
     {
-        $user = new UserFactory()->create('test@test.com', 'test1234');
+        $user = $this->userFactory->create('test@test.com', 'test1234');
 
         $manager->persist($user);
         $manager->flush();

@@ -1,4 +1,5 @@
 <?php
+declare(strict_types=1);
 
 namespace App\Users\Application\Command\CreateUser;
 
@@ -8,7 +9,10 @@ use App\Users\Domain\Repository\UserRepositoryInterface;
 
 class CreateUserCommandHandler implements CommandHandlerInterface
 {
-    public function __construct(private readonly UserRepositoryInterface $userRepository)
+    public function __construct(
+        private readonly UserRepositoryInterface $userRepository,
+        private readonly UserFactory $userFactory
+    )
     {
     }
 
@@ -17,9 +21,9 @@ class CreateUserCommandHandler implements CommandHandlerInterface
      */
     public function __invoke(CreateUserCommand $command): string
     {
-        $user = new UserFactory()->create($command->email, $command->password);
+        $user = $this->userFactory->create($command->email, $command->password);
         $this->userRepository->add($user);
 
-        return $user->getUlid();
+        return $user->ulid;
     }
 }

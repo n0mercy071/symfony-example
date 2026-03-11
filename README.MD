@@ -29,3 +29,7 @@
 ## Step 6
 - [x] CQRS pattern
 - [x] Symfony Messenger
+
+## Step 7
+- [x] JWT Authentication
+- [ ] Refresh token

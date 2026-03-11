@@ -1,4 +1,5 @@
 <?php
+declare(strict_types=1);
 
 namespace App\Tests\Functional\Users\Infrastructure\Repository;
 
@@ -17,12 +18,14 @@ class UserRepositoryTest extends WebTestCase
     private UserRepository $repository;
     private Generator $faker;
     private AbstractDatabaseTool $databaseTool;
+    private UserFactory $userFactory;
 
     protected function setUp(): void
     {
         parent::setUp();
 
         $this->repository = $this->getContainer()->get(UserRepository::class);
+        $this->userFactory = $this->getContainer()->get(UserFactory::class);
         $this->faker = Factory::create();
         $this->databaseTool = static::getContainer()->get(DatabaseToolCollection::class)->get();
     }
@@ -31,12 +34,12 @@ class UserRepositoryTest extends WebTestCase
     {
         $email = $this->faker->email();
         $password = $this->faker->password();
-        $user = new UserFactory()->create($email, $password);
+        $user = $this->userFactory->create($email, $password);
 
         $this->repository->add($user);
 
-        $existingUser = $this->repository->findByUlid($user->getUlid());
-        $this->assertEquals($user->getUlid(), $existingUser->getUlid());
+        $existingUser = $this->repository->findByUlid($user->ulid);
+        $this->assertEquals($user->ulid, $existingUser->ulid);
     }
 
     public function testUserFoundSuccessfully(): void
@@ -46,6 +49,6 @@ class UserRepositoryTest extends WebTestCase
 
         $foundUser = $this->repository->findByUlid($user->getUlid());
 
-        $this->assertEquals($user->getUlid(), $foundUser->getUlid());
+        $this->assertEquals($user->getUlid(), $foundUser->ulid);
     }
 }

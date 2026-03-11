@@ -10,6 +10,7 @@
         "doctrine/doctrine-bundle": "^3.2.2",
         "doctrine/doctrine-migrations-bundle": "^4.0",
         "doctrine/orm": "^3.6.2",
+        "lexik/jwt-authentication-bundle": "^3.2",
         "symfony/console": "8.0.*",
         "symfony/dotenv": "8.0.*",
         "symfony/flex": "^2.10",
@@ -17,7 +18,8 @@
         "symfony/messenger": "8.0.*",
         "symfony/runtime": "8.0.*",
         "symfony/uid": "8.0.*",
-        "symfony/yaml": "8.0.*"
+        "symfony/yaml": "8.0.*",
+        "webmozart/assert": "^2.1"
     },
     "require-dev": {
         "dama/doctrine-test-bundle": "^8.6",
