@@ -32,4 +32,4 @@
 
 ## Step 7
 - [x] JWT Authentication
-- [ ] Refresh token
+- [x] Refresh token

@@ -11,19 +11,18 @@ security:
                 property: email
 
     firewalls:
-        login:
-            pattern: ^/api/auth/token/login
+        api:
+            pattern: ^/api
             stateless: true
+            entry_point: jwt
             json_login:
                 username_path: email
                 check_path: /api/auth/token/login
                 success_handler: lexik_jwt_authentication.handler.authentication_success
                 failure_handler: lexik_jwt_authentication.handler.authentication_failure
-
-        api:
-            pattern: ^/api
-            stateless: true
             jwt: ~
+            refresh_jwt:
+                check_path: /api/auth/token/refresh
 
     access_control:
         - { path: ^/api/auth/token/login, roles: PUBLIC_ACCESS }

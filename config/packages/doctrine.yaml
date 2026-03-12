@@ -20,6 +20,12 @@ doctrine:
                 dir: '%kernel.project_dir%/src/Users/Infrastructure/Database/ORM'
                 prefix: 'App\Users\Domain\Entity'
                 alias: User
+
+            Shared:
+                type: attribute
+                dir: '%kernel.project_dir%/src/Shared/Domain/Entity'
+                prefix: 'App\Shared\Domain\Entity'
+                alias: Share
         controller_resolver:
             auto_mapping: false
 
