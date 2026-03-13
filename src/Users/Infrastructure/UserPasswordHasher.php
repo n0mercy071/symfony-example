@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace App\Users\Domain;
+namespace App\Users\Infrastructure;
 
 use App\Users\Domain\Entity\User;
 use App\Users\Domain\Service\UserPasswordHasherInterface;

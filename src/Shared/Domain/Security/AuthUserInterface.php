@@ -11,9 +11,15 @@ interface AuthUserInterface extends UserInterface, PasswordAuthenticatedUserInte
 {
     public string $ulid {
         get;
+        set;
     }
 
     public string $email {
         get;
+        set;
     }
+
+    public function getUlid(): string;
+
+    public function getEmail(): string;
 }

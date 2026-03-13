@@ -37,4 +37,4 @@
 ## Step 8
 - [x] PHP CS Fixer
 - [x] Deptrac
-- [ ] PHPStan
+- [x] PHPStan

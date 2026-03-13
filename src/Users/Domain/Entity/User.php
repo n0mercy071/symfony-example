@@ -6,7 +6,7 @@ namespace App\Users\Domain\Entity;
 
 use App\Shared\Domain\Security\AuthUserInterface;
 use App\Shared\Domain\Service\UlidService;
-use App\Users\Domain\UserPasswordHasher;
+use App\Users\Domain\Service\UserPasswordHasherInterface;
 
 class User implements AuthUserInterface
 {
@@ -35,7 +35,7 @@ class User implements AuthUserInterface
         return $this->password;
     }
 
-    public function setPassword(?string $password, UserPasswordHasher $passwordHasher): void
+    public function setPassword(?string $password, UserPasswordHasherInterface $passwordHasher): void
     {
         if (is_null($password)) {
             $this->password = null;

@@ -28,6 +28,7 @@
         "fakerphp/faker": "^1.24.1",
         "friendsofphp/php-cs-fixer": "^3.94",
         "liip/test-fixtures-bundle": "^3.8.1",
+        "phpstan/phpstan": "^2.1",
         "phpunit/phpunit": "^13.0.5",
         "qossmic/deptrac-shim": "^1.0",
         "symfony/browser-kit": "8.0.*",
@@ -80,9 +81,11 @@
             "php -d error_reporting=\"E_ALL & ~E_DEPRECATED\" vendor/bin/deptrac analyse --config-file=deptrac-layers.yaml",
             "php -d error_reporting=\"E_ALL & ~E_DEPRECATED\" vendor/bin/deptrac analyse --config-file=deptrac-modules.yaml"
         ],
+        "phpstan": "vendor/bin/phpstan analyse --memory-limit=2G",
         "check": [
             "@cs",
-            "@deptrac"
+            "@deptrac",
+            "@phpstan"
         ]
     },
     "conflict": {
