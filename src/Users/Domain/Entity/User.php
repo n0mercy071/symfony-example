@@ -6,7 +6,7 @@ namespace App\Users\Domain\Entity;
 
 use App\Shared\Domain\Security\AuthUserInterface;
 use App\Shared\Domain\Service\UlidService;
-use App\Users\Infrastructure\UserPasswordHasher;
+use App\Users\Domain\UserPasswordHasher;
 
 class User implements AuthUserInterface
 {
