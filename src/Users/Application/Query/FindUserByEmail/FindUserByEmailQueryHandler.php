@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Users\Application\Query\FindUserByEmail;
 
 use App\Shared\Application\Query\QueryHandlerInterface;
@@ -10,8 +12,7 @@ class FindUserByEmailQueryHandler implements QueryHandlerInterface
 {
     public function __construct(
         private readonly UserRepositoryInterface $userRepository,
-    )
-    {
+    ) {
     }
 
     public function __invoke(FindUserByEmailQuery $query): ?UserDTO

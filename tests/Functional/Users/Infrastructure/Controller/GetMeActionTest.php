@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 namespace App\Tests\Functional\Users\Infrastructure\Controller;
@@ -31,11 +32,11 @@ class GetMeActionTest extends WebTestCase
 
         $client->setServerParameter('HTTP_AUTHORIZATION', sprintf('Bearer %s', $data['token']));
 
-        //act
+        // act
         $client->request('GET', '/api/users/me');
         $data = json_decode($client->getResponse()->getContent(), true);
 
-        //assert
+        // assert
         $this->assertEquals($user->getEmail(), $data['email']);
         $this->assertEquals($user->getUlid(), $data['ulid']);
     }

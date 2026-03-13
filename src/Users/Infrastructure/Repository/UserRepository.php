@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Users\Infrastructure\Repository;
 
 use App\Users\Domain\Entity\User;
@@ -27,6 +29,7 @@ class UserRepository extends ServiceEntityRepository implements UserRepositoryIn
     public function findByUlid(string $ulid): ?User
     {
         $res = $this->find($ulid);
+
         return $res instanceof User ? $res : null;
     }
 

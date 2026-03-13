@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 namespace App\Tests\Functional\Controller;
@@ -15,7 +16,7 @@ class RefreshTokenActionTest extends WebTestCase
         $client = static::createClient();
         $this->setAuthTokens($client);
 
-        //act
+        // act
         $client->request('POST', '/api/auth/token/refresh',
             server: [
                 'CONTENT_TYPE' => 'application/json',
@@ -26,7 +27,7 @@ class RefreshTokenActionTest extends WebTestCase
         );
         $data = json_decode($client->getResponse()->getContent(), true);
 
-        //assert
+        // assert
         $this->assertResponseIsSuccessful();
         $this->assertNotEmpty($data['token']);
         $this->assertNotEmpty($data['refresh_token']);

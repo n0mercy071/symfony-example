@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 namespace App\Shared\Infrastructure\Security;
@@ -11,9 +12,8 @@ use Webmozart\Assert\Assert;
 readonly class UserFetcher implements UserFetcherInterface
 {
     public function __construct(
-        private Security $security
-    )
-    {
+        private Security $security,
+    ) {
     }
 
     public function getAuthUser(): AuthUserInterface

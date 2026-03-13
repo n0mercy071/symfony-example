@@ -1,9 +1,10 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Tests\Functional\Users\Application\Query\FindUserByEmail;
 
 use App\Shared\Application\Query\QueryBusInterface;
-
 use App\Tests\Resource\Fixture\UserFixture;
 use App\Users\Application\DTO\UserDTO;
 use App\Users\Application\Query\FindUserByEmail\FindUserByEmailQuery;

@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 namespace App\Shared\Domain\Entity;
@@ -11,5 +12,4 @@ use Gesdinet\JWTRefreshTokenBundle\Entity\RefreshToken as BaseRefreshToken;
 #[Table(name: 'refresh_tokens')]
 class RefreshToken extends BaseRefreshToken
 {
-
 }

@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 namespace App\Users\Application\Command\CreateUser;
@@ -11,9 +12,8 @@ class CreateUserCommandHandler implements CommandHandlerInterface
 {
     public function __construct(
         private readonly UserRepositoryInterface $userRepository,
-        private readonly UserFactory $userFactory
-    )
-    {
+        private readonly UserFactory $userFactory,
+    ) {
     }
 
     /**

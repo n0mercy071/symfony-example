@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 namespace App\Users\Domain\Entity;
@@ -38,6 +39,7 @@ class User implements AuthUserInterface
     {
         if (is_null($password)) {
             $this->password = null;
+
             return;
         }
 
@@ -53,6 +55,6 @@ class User implements AuthUserInterface
 
     public function getUserIdentifier(): string
     {
-         return $this->email;
+        return $this->email;
     }
 }

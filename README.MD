@@ -33,3 +33,8 @@
 ## Step 7
 - [x] JWT Authentication
 - [x] Refresh token
+
+## Step 8
+- [x] PHP CS Fixer
+- [ ] Deptrac
+- [ ] PHPStan

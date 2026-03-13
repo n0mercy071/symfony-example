@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 namespace App\Users\Application\DTO;
@@ -10,8 +11,7 @@ readonly class UserDTO
     public function __construct(
         public string $ulid,
         public string $email,
-    )
-    {
+    ) {
     }
 
     public static function fromEntity(User $user): UserDTO
