@@ -1,4 +1,6 @@
 # Symfony example
+# Запуск для разработки
+1. make dc_build dc_up
 ## Step 1
 - [x] Install docker
 - [x] Install docker compose
