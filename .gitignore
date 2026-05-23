@@ -26,3 +26,4 @@
 /.php-cs-fixer.cache
 ###< friendsofphp/php-cs-fixer ###
 /.deptrac.cache
+/.phpactor.json

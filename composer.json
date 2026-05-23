@@ -11,6 +11,8 @@
         "doctrine/doctrine-migrations-bundle": "^4.0",
         "doctrine/orm": "^3.6.2",
         "gesdinet/jwt-refresh-token-bundle": "2.0.0-beta",
+        "google/protobuf": "^5.34",
+        "grpc/grpc": "^1.80",
         "lexik/jwt-authentication-bundle": "^3.2",
         "symfony/console": "8.0.*",
         "symfony/dotenv": "8.0.*",

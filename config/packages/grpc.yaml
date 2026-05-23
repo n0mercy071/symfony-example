@@ -1,0 +1,2 @@
+parameters:
+    grpc.hostname: '%env(GRPC_HOSTNAME)%'
